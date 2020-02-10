@@ -50,6 +50,9 @@ def solve(n, lines):
             if best_num_options == 1:
                 break
 
+        if not best_num_options == 1:
+            return grid
+
         insert_number(grid, penalties, n, best_x, best_y, best_option)
         empty_spaces -= 1
 
@@ -130,6 +133,8 @@ def main():
     n, lines = read_input()
 
     grid = solve(n, lines)
+
+    # print("Penalty: " + str(calculate_penalty(n, grid)))
 
     for x in range(n * n):
         line = ""
