@@ -6,7 +6,6 @@ if __name__ == '__main__':
         l, a, b = map(int, sys.stdin.readline().split())
         s = sys.stdin.readline()
         i = 1
-        cost = 0
         cost = [float('inf')] * (l + 1)
         cost[0] = 0
         k = 0

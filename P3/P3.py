@@ -130,13 +130,12 @@ def kingRichardKnights(n, commands, knights):
     return result
 
 if __name__ == '__main__':
-    line = sys.stdin.readline()
     raw_data = sys.stdin.readline().split("-")
     raw_data = raw_data[0:len(raw_data)-1]
-    n = int(int(sys.stdin.readline())
+    n = int(sys.stdin.readline())
     s = int(sys.stdin.readline())
 
-    commands = []n 
+    commands = []
     for _ in range(s):
         commands.append(list(map(int, sys.stdin.readline().rstrip().split())))
 

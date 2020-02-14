@@ -1,4 +1,8 @@
+'''
+Author: Stephen Driscoll
+'''
 from penaltyChecker import calculate_penalty
+import sys
 
 
 def insert_number(grid, penalties, n, row, column, number):
@@ -24,7 +28,8 @@ def insert_number(grid, penalties, n, row, column, number):
 
 
 if __name__ == "__main__":
-    line = input().split()
+    file_text = open(sys.argv[1], 'r')
+    line = file_text.readline().split()
     n, k = int(line[0]), int(line[1])
     dimensions = n * n
 
@@ -34,7 +39,7 @@ if __name__ == "__main__":
     penalties = [[[0 for x in range(dimensions)] for y in range(dimensions)] for i in range(dimensions)]
 
     for i in range(k):
-        line = input().split()
+        line = file_text.readline().split()
         insert_number(grid, penalties, n, (int(line[0]) - 1), (int(line[1]) - 1), int(line[2]))
 
     # While there are still empty spaces, find and insert the best number next. This is not a backtracking solution.
