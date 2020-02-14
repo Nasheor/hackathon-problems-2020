@@ -1,3 +1,6 @@
+"""
+Author: Stephen Driscoll
+"""
 from penaltyChecker import calculate_penalty
 
 

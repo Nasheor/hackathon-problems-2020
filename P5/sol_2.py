@@ -1,6 +1,6 @@
-'''
+"""
 Author: Stephen Driscoll
-'''
+"""
 
 
 def read_input():
