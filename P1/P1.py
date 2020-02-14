@@ -3,8 +3,6 @@ Author: Stephen Driscoll
 """
 import sys
 
-from penaltyChecker import calculate_penalty
-
 
 def insert_number(grid, penalties, n, row, column, number):
     grid[row][column] = number      # Insert number
@@ -74,5 +72,5 @@ if __name__ == "__main__":
         empty_spaces -= 1
 
     # Done
-    print("Penalty " + str(calculate_penalty(n, grid)))
-    print('\n'.join([' '.join([str(cell) for cell in row]) for row in grid]))
+    with open(sys.argv[2], 'w') as output:
+        output.write('\n'.join([' '.join([str(cell) for cell in row]) for row in grid]))
